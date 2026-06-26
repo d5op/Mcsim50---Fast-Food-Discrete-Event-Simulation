@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    logment
+{% endblock %}
+
+{% block main %}
+    <h5>User Input</h5>
+        <table class="table table-striped">
+            {% for entry in log_list %}
+                <tr>
+                    <td>{{entry}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+{% endblock %}

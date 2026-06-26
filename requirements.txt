@@ -1,0 +1,10 @@
+Flask
+Flask-Session
+pytz
+requests
+datetime
+simpy
+numpy
+datetime
+plotly-express
+panda

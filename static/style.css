@@ -1,0 +1,31 @@
+.hidden {
+    display: none !important;
+}
+.hint {
+    position: absolute;
+    top: -40px; 
+    left: 0;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 10;
+}
+.input-wrapper {
+    position: relative;
+}
+body{
+    font-family: "Luckiest Guy", cursive;
+}
+input[type="text"], input[type="password"], textarea {
+    font-family: "BBH Hegarty", sans-serif !important;
+}
+.video{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

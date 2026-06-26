@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    saved result
+{% endblock %}
+
+{% block main %}
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="p-3 bg-light rounded shadow-sm overflow-auto">
+                <h5>Records:</h5>
+                <table class="table table-striped">
+                    <tr>
+                        <th>StampTime</th>
+                        <th>Time:</th>
+                        <th>Location:</th>
+                        <th>Counters:</th>
+                        <th>Staffs:</th>
+                        <th>Run Duration:</th>
+                        <th>Cycles:</th>
+                        <th></th>
+                    </tr>
+                    {% for row in all_inputs %}
+                        <tr>
+                            <td>{{ row.time }}</td>
+                            <td>{{ row.input.time }}</td>
+                            <td>{{ row.input.location }}</td>
+                            <td>{{ row.input.counter }}</td>
+                            <td>{{ row.input.staff}}</td>
+                            <td>{{ row.input.duration }}</td>
+                            <td>{{ row.input.cycle }}</td>
+                            <td>
+                                <form action="/save" method="post">
+                                    <button type="submit" class="btn btn-primary" href="/graph" name="button" value="{{row.id}}" >create graph</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
